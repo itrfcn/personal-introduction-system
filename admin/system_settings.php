@@ -68,39 +68,39 @@ $settings = get_system_settings();
     <div class="system-settings-container">
         <form class="system-settings-form" method="POST" action="system_settings.php">
             <div class="form-group">
-                <label for="site_title">网站标题</label>
-                <input type="text" id="site_title" name="site_title" value="<?php echo $settings['site_title']; ?>" placeholder="请输入网站标题" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="site_subtitle">网站副标题</label>
-                <input type="text" id="site_subtitle" name="site_subtitle" value="<?php echo $settings['site_subtitle']; ?>" placeholder="请输入网站副标题">
-            </div>
-            
-            <div class="form-group">
-                <label for="site_url">网站URL</label>
-                <input type="url" id="site_url" name="site_url" value="<?php echo $settings['site_url']; ?>" placeholder="请输入网站URL">
-            </div>
-            
-            <div class="form-group">
-                <label for="site_description">网站描述</label>
-                <textarea id="site_description" name="site_description" rows="3" placeholder="请输入网站描述"><?php echo $settings['site_description']; ?></textarea>
-            </div>
-            
-            <div class="form-group">
-                <label for="copyright_text">版权信息</label>
-                <input type="text" id="copyright_text" name="copyright_text" value="<?php echo $settings['copyright_text']; ?>" placeholder="请输入版权信息">
-            </div>
-            
-            <div class="form-group">
-                <label for="logo_text">Logo文本</label>
-                <input type="text" id="logo_text" name="logo_text" value="<?php echo $settings['logo_text']; ?>" placeholder="请输入Logo文本">
-            </div>
-            
-            <div class="form-group">
-                <label for="logo_icon">Logo图标类名</label>
-                <input type="text" id="logo_icon" name="logo_icon" value="<?php echo $settings['logo_icon']; ?>" placeholder="请输入Font Awesome图标类名（如：fas fa-user-circle）">
-            </div>
+            <label for="site_title">网站标题</label>
+            <input type="text" id="site_title" name="site_title" value="<?php echo htmlspecialchars($settings['site_title']); ?>" placeholder="请输入网站标题" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="site_subtitle">网站副标题</label>
+            <input type="text" id="site_subtitle" name="site_subtitle" value="<?php echo htmlspecialchars($settings['site_subtitle']); ?>" placeholder="请输入网站副标题">
+        </div>
+        
+        <div class="form-group">
+            <label for="site_url">网站URL</label>
+            <input type="url" id="site_url" name="site_url" value="<?php echo htmlspecialchars($settings['site_url']); ?>" placeholder="请输入网站URL">
+        </div>
+        
+        <div class="form-group">
+            <label for="site_description">网站描述</label>
+            <textarea id="site_description" name="site_description" rows="3" placeholder="请输入网站描述"><?php echo htmlspecialchars($settings['site_description']); ?></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="copyright_text">版权信息</label>
+            <input type="text" id="copyright_text" name="copyright_text" value="<?php echo htmlspecialchars($settings['copyright_text']); ?>" placeholder="请输入版权信息">
+        </div>
+        
+        <div class="form-group">
+            <label for="logo_text">Logo文本</label>
+            <input type="text" id="logo_text" name="logo_text" value="<?php echo htmlspecialchars($settings['logo_text']); ?>" placeholder="请输入Logo文本">
+        </div>
+        
+        <div class="form-group">
+            <label for="logo_icon">Logo图标类名</label>
+            <input type="text" id="logo_icon" name="logo_icon" value="<?php echo htmlspecialchars($settings['logo_icon']); ?>" placeholder="请输入Font Awesome图标类名（如：fas fa-user-circle）">
+        </div>
             
             <div class="form-actions">
                 <button type="submit" class="btn btn-primary">保存设置</button>

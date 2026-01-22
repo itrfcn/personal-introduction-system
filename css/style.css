@@ -496,6 +496,8 @@ body {
 
 .article-content {
     padding: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .article-content h3 {
@@ -504,6 +506,7 @@ body {
     line-height: 1.4;
     white-space: normal;
     word-wrap: break-word;
+    text-align: center;
 }
 
 .article-content h3 a {
@@ -719,6 +722,16 @@ body {
     padding: 2rem;
     border-radius: 10px;
     border-left: 5px solid #667eea;
+    border-right: 5px solid #667eea;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.about-section:hover {
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
 }
 
 .about-section h2 {
@@ -789,6 +802,8 @@ body {
     padding: 2rem;
     border-radius: 10px;
     transition: all 0.3s ease;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .article-item:hover {
@@ -801,6 +816,7 @@ body {
     font-size: 1.8rem;
     white-space: normal;
     word-wrap: break-word;
+    text-align: center;
 }
 
 .article-item h2 a {

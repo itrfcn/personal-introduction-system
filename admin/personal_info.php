@@ -68,32 +68,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form class="personal-info-form" method="POST" action="personal_info.php">
         <div class="form-group">
             <label for="name">姓名</label>
-            <input type="text" id="name" name="name" value="<?php echo $personal_info['name'] ?? ''; ?>" placeholder="请输入姓名" required>
+            <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($personal_info['name'] ?? ''); ?>" placeholder="请输入姓名" required>
         </div>
         
         <div class="form-group">
             <label for="avatar">头像URL</label>
-            <input type="text" id="avatar" name="avatar" value="<?php echo $personal_info['avatar'] ?? ''; ?>" placeholder="请输入头像图片URL">
+            <input type="text" id="avatar" name="avatar" value="<?php echo htmlspecialchars($personal_info['avatar'] ?? ''); ?>" placeholder="请输入头像图片URL">
         </div>
         
         <div class="form-group">
             <label for="bio">个人简介</label>
-            <textarea id="bio" name="bio" rows="3" placeholder="请输入个人简介"><?php echo $personal_info['bio'] ?? ''; ?></textarea>
+            <textarea id="bio" name="bio" rows="3" placeholder="请输入个人简介"><?php echo htmlspecialchars($personal_info['bio'] ?? ''); ?></textarea>
         </div>
         
         <div class="form-group">
             <label for="skills">技能专长</label>
-            <textarea id="skills" name="skills" rows="3" placeholder="请输入技能专长，用逗号分隔"><?php echo $personal_info['skills'] ?? ''; ?></textarea>
+            <textarea id="skills" name="skills" rows="3" placeholder="请输入技能专长，用逗号分隔"><?php echo htmlspecialchars($personal_info['skills'] ?? ''); ?></textarea>
         </div>
         
         <div class="form-group">
             <label for="education">教育背景</label>
-            <textarea id="education" name="education" rows="3" placeholder="请输入教育背景"><?php echo $personal_info['education'] ?? ''; ?></textarea>
+            <textarea id="education" name="education" rows="3" placeholder="请输入教育背景"><?php echo htmlspecialchars($personal_info['education'] ?? ''); ?></textarea>
         </div>
         
         <div class="form-group">
             <label for="experience">工作经验</label>
-            <textarea id="experience" name="experience" rows="3" placeholder="请输入工作经验"><?php echo $personal_info['experience'] ?? ''; ?></textarea>
+            <textarea id="experience" name="experience" rows="3" placeholder="请输入工作经验"><?php echo htmlspecialchars($personal_info['experience'] ?? ''); ?></textarea>
         </div>
         
         <div class="form-actions">

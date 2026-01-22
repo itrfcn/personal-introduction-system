@@ -99,22 +99,22 @@ $status = $is_edit ? $icon['status'] : 'active';
     <form class="social-icon-form" method="POST" action="add_social_icon.php<?php echo $is_edit ? '?id=' . $icon_id : ''; ?>">
         <div class="form-group">
             <label for="platform">平台名称</label>
-            <input type="text" id="platform" name="platform" value="<?php echo $platform; ?>" placeholder="请输入平台名称" required>
+            <input type="text" id="platform" name="platform" value="<?php echo htmlspecialchars($platform); ?>" placeholder="请输入平台名称" required>
         </div>
         
         <div class="form-group">
             <label for="icon_class">图标类名</label>
-            <input type="text" id="icon_class" name="icon_class" value="<?php echo $icon_class; ?>" placeholder="请输入Font Awesome图标类名（如：fab fa-weixin）" required>
+            <input type="text" id="icon_class" name="icon_class" value="<?php echo htmlspecialchars($icon_class); ?>" placeholder="请输入Font Awesome图标类名（如：fab fa-weixin）" required>
         </div>
         
         <div class="form-group">
             <label for="url">链接URL</label>
-            <input type="url" id="url" name="url" value="<?php echo $url; ?>" placeholder="请输入链接URL" required>
+            <input type="url" id="url" name="url" value="<?php echo htmlspecialchars($url); ?>" placeholder="请输入链接URL" required>
         </div>
         
         <div class="form-group">
             <label for="sort_order">排序</label>
-            <input type="number" id="sort_order" name="sort_order" value="<?php echo $sort_order; ?>" placeholder="请输入排序值" min="0">
+            <input type="number" id="sort_order" name="sort_order" value="<?php echo intval($sort_order); ?>" placeholder="请输入排序值" min="0">
         </div>
         
         <div class="form-group">

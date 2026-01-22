@@ -100,22 +100,22 @@ $image = $is_edit ? $site['image'] : '';
     <form class="site-form" method="POST" action="add_site.php<?php echo $is_edit ? '?id=' . $site_id : ''; ?>">
         <div class="form-group">
             <label for="name">站点名称</label>
-            <input type="text" id="name" name="name" value="<?php echo $name; ?>" placeholder="请输入站点名称" required>
+            <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($name); ?>" placeholder="请输入站点名称" required>
         </div>
         
         <div class="form-group">
             <label for="url">站点URL</label>
-            <input type="url" id="url" name="url" value="<?php echo $url; ?>" placeholder="请输入站点URL" required>
+            <input type="url" id="url" name="url" value="<?php echo htmlspecialchars($url); ?>" placeholder="请输入站点URL" required>
         </div>
         
         <div class="form-group">
             <label for="image">站点图片URL</label>
-            <input type="text" id="image" name="image" value="<?php echo $image; ?>" placeholder="请输入站点图片URL">
+            <input type="text" id="image" name="image" value="<?php echo htmlspecialchars($image); ?>" placeholder="请输入站点图片URL">
         </div>
         
         <div class="form-group">
             <label for="description">站点描述</label>
-            <textarea id="description" name="description" rows="3" placeholder="请输入站点描述"><?php echo $description; ?></textarea>
+            <textarea id="description" name="description" rows="3" placeholder="请输入站点描述"><?php echo htmlspecialchars($description); ?></textarea>
         </div>
         
         <div class="form-actions">

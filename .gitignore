@@ -1,0 +1,78 @@
+# PHP项目通用忽略项
+
+# 日志文件
+*.log
+error_log
+
+# 临时文件
+*.tmp
+*.temp
+/tmp
+/cache
+
+# 编译生成的文件
+/vendor
+/node_modules
+
+# IDE和编辑器文件
+/.idea
+/.vscode
+*.swp
+*.swo
+*~
+
+# 操作系统文件
+Thumbs.db
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# 环境配置文件
+.env
+.env.local
+.env.*.local
+
+# 项目特定忽略项
+
+# 数据存储目录（JSON模式下自动创建，包含动态数据）
+data/
+
+# 安装锁文件（防止重复安装）
+data/install.lock
+
+# 数据库备份文件
+database/*.sql
+
+# 配置文件（可能包含敏感信息）
+includes/config.php
+
+# 临时上传文件
+/uploads/
+
+# 会话文件
+session/
+
+# 编译后的CSS/JS文件（如果使用构建工具）
+/css/*.min.css
+/js/*.min.js
+
+# 测试文件
+/tests/
+/phpunit.xml
+
+# 部署相关文件
+deploy.sh
+composer.lock
+package-lock.json
+
+# 其他可能的临时文件
+*.bak
+*.old
+*.backup
+
+# 服务器配置文件
+.htaccess
+web.config

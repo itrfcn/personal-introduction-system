@@ -82,27 +82,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form class="article-form" method="POST" action="edit_article.php?id=<?php echo $article_id; ?>">
         <div class="form-group">
             <label for="title">文章标题</label>
-            <input type="text" id="title" name="title" value="<?php echo $article['title']; ?>" placeholder="请输入文章标题" required>
+            <input type="text" id="title" name="title" value="<?php echo htmlspecialchars($article['title']); ?>" placeholder="请输入文章标题" required>
         </div>
         
         <div class="form-group">
             <label for="category">文章分类</label>
-            <input type="text" id="category" name="category" value="<?php echo $article['category'] ?? ''; ?>" placeholder="请输入文章分类">
+            <input type="text" id="category" name="category" value="<?php echo htmlspecialchars($article['category'] ?? ''); ?>" placeholder="请输入文章分类">
         </div>
         
         <div class="form-group">
             <label for="image">文章图片URL</label>
-            <input type="text" id="image" name="image" value="<?php echo $article['image'] ?? ''; ?>" placeholder="请输入文章图片URL">
+            <input type="text" id="image" name="image" value="<?php echo htmlspecialchars($article['image'] ?? ''); ?>" placeholder="请输入文章图片URL">
         </div>
         
         <div class="form-group">
             <label for="excerpt">文章摘要</label>
-            <textarea id="excerpt" name="excerpt" rows="3" placeholder="请输入文章摘要"><?php echo $article['excerpt'] ?? ''; ?></textarea>
+            <textarea id="excerpt" name="excerpt" rows="3" placeholder="请输入文章摘要"><?php echo htmlspecialchars($article['excerpt'] ?? ''); ?></textarea>
         </div>
         
         <div class="form-group">
             <label for="content">文章内容</label>
-            <textarea id="content" name="content" rows="10" placeholder="请输入文章内容" required><?php echo $article['content']; ?></textarea>
+            <textarea id="content" name="content" rows="10" placeholder="请输入文章内容" required><?php echo htmlspecialchars($article['content']); ?></textarea>
         </div>
         
         <div class="form-group">
